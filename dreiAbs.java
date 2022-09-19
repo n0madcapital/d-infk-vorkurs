@@ -13,7 +13,8 @@ public class dreiAbs {
 			s.nextLine();
 		}
 		int[] numbersa = numbers.stream().mapToInt(i -> i).toArray();
-		int max = (numbersa[0]+numbersa[1] < 0 ? Math.min(numbersa[0], numbersa[1]) : Math.max(numbersa[0], numbersa[1]))+numbersa[2] < 0 ? Math.min((numbersa[0]+numbersa[1] < 0 ? Math.min(numbersa[0], numbersa[1]) : Math.max(numbersa[0], numbersa[1])), numbersa[2]) : Math.max((numbersa[0]+numbersa[1] < 0 ? Math.min(numbersa[0], numbersa[1]) : Math.max(numbersa[0], numbersa[1])), numbersa[2]);
+		int max1 = (numbersa[0]+numbersa[1] < 0 ? Math.min(numbersa[0], numbersa[1]) : Math.max(numbersa[0], numbersa[1]));
+		int max = max1+numbersa[2] < 0 ? Math.min(max1, numbersa[2]) : Math.max(max1, numbersa[2]);
 		System.out.println(max);
 		s.close();
 
